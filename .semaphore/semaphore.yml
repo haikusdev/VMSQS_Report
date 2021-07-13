@@ -1,0 +1,17 @@
+version: v1.0
+name: Using commands_file
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Calling text file
+    task:
+      jobs:
+        - name: Using command_file
+          commands:
+            - checkout
+            - bash run.sh
+      env_vars:
+        - name: APP_ENV
+          value: ${REPO_NAME}
