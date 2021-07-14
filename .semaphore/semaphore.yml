@@ -11,6 +11,9 @@ blocks:
         - name: Using command_file
           commands:
             - checkout
+            - pwd
+            - ls
+            - find
             - bash run.sh
       env_vars:
         - name: APP_ENV
